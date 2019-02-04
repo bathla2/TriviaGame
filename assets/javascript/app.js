@@ -108,7 +108,7 @@ function nextQuestion()
 function timeUp()
 {
     unAnswered++;
-    $("#time").html(" Out of time, the correct answer was " + correctAnswers[count-1] + " Please Wait");
+    $("#time").html(" Out of time, the correct answer was " + correctAnswers[count-1] + "| Please Wait for next Question");
     clearInterval(intervalId);
     $("#question").html("<img src= 'assets/images/n.jpg' width='400px'/>");
     $("#option1").html("");
@@ -125,7 +125,7 @@ function correctAnswer()
 {
 if ($(this).text() === correctAnswers[count-1])
 {
-    $("#time").html("Congratulations, " + correctAnswers[count-1] + " is correct" + " Please Wait");
+    $("#time").html("Congratulations, " + correctAnswers[count-1] + " is correct" + "| Please Wait for next Question");
     clearInterval(intervalId);
     $("#question").html("<img src=" + images[count-1] + " width='400px'>");
     $("#option1").html("");
@@ -147,7 +147,7 @@ else
 
 function wrongAnswer()
 {
-    $("#time").html("Sorry, you picked the wrong answer, the correct answer was: " + correctAnswers[count-1]+ " Please Wait" );
+    $("#time").html("Sorry, you picked the wrong answer, the correct answer was: " + correctAnswers[count-1]+ "| Please Wait for next Question" );
     clearInterval(intervalId);    
     $("#question").html("<img src= 'assets/images/w.jpg' width='400px'/>");
     $("#option1").html("");
